@@ -1,0 +1,4 @@
+INSERT INTO property (title, description, location, price, is_available, views, discount) VALUES
+                                                                                              ('Luxury Villa', 'Beautiful villa with ocean view', 'California', 1200000.00, TRUE, 50, 5.0),
+                                                                                              ('Modern Apartment', 'Fully furnished city apartment', 'New York', 750000.00, TRUE, 30, 3.0),
+                                                                                              ('Cozy Cottage', 'Small cozy cottage in the countryside', 'Texas', 300000.00, TRUE, 20, 2.0);

@@ -1,1 +1,40 @@
- 
+replicaCount: 1
+
+image:
+  repository: real-estate-platform
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+database:
+  host: postgres
+  port: 5432
+  name: realestate_db
+  username: postgres
+  password: admin
+
+environment:
+  SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/realestate_db
+  SPRING_DATASOURCE_USERNAME: postgres
+  SPRING_DATASOURCE_PASSWORD: admin
+  SPRING_JPA_HIBERNATE_DDL_AUTO: update
+  SPRING_FLYWAY_ENABLED: "true"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+ingress:
+  enabled: false
+
+tolerations: []
+
+affinity: {}
+

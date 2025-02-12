@@ -1,1 +1,62 @@
- 
+{
+  "info": {
+    "name": "Real Estate API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Properties",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/properties",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["properties"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Property",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"title\": \"Luxury Villa\", \"description\": \"A beautiful villa in Dubai\", \"location\": \"Dubai\", \"price\": 1500000, \"available\": true, \"bedrooms\": 4, \"bathrooms\": 3 }"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/properties",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["properties"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Property",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/properties/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["properties", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

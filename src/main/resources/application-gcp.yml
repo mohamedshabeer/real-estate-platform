@@ -1,1 +1,27 @@
- 
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://gcp-instance-ip:5432/realestate_db
+    username: gcp_user
+    password: gcp_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  flyway:
+    enabled: true
+
+cloud:
+  gcp:
+    project-id: project-id
+    sql:
+      instance-connection-name: connection-name
+      database-name: realestate_db
+
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
